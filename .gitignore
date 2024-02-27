@@ -1,0 +1,8 @@
+vector_model/
+<<<<<<< HEAD
+=======
+rag_db.tar.gz
+>>>>>>> 7117840 (update)
+rag_db/
+.chainlit/
+__pycache__
