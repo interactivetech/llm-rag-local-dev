@@ -1,10 +1,7 @@
 
 # Local RAG APP instructions
 
-<<<<<<< HEAD
-=======
 `tar -xvf rag_db.tar.gz rag_db`
->>>>>>> 7117840 (update)
 # install vectordb locally
 
 Use conatiner mendeza/mistral-rag-env:0.0.11-pachctl
