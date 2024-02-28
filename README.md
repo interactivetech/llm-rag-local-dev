@@ -25,6 +25,21 @@ Next, stop jupyter notebook. we will run python scripts to create the vector dat
 # run app
 `pip install openai chainlit langchain`
 `bash run_app.sh`
+
+# Run the FastAPI endpoint
+* `docker run -it -p 8888:8888 -v $PWD:/home mendeza/mistral-rag-env:0.0.11-pachctl /bin/bash`
+* `cd /home`
+* `pip install chromadb uvicorn fastapi sentence_transformers==2.2.2 openai chainlit`
+* `bash run_api.sh`
+
+Test API with curl request:
+```
+curl -v -X 'POST' \
+  'http://127.0.0.1:8888/generate/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+
+```
 ## (OPTIONAL) re-index the documents
 ### Run index_docs.sh
 
@@ -32,6 +47,3 @@ NOTE: this requires a GPU
 
 `pip install langchain`
 `bash index_docs.sh`
-
-
-
